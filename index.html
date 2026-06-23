@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nutripot – Full Product Info</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',sans-serif;background:#f0ede6;color:#2d1f0e;}
+.hero{background:linear-gradient(135deg,#3a6b35 0%,#1e3d1a 100%);color:#f5ead0;padding:36px 20px 28px;text-align:center;border-bottom:4px solid #8B6914;}
+.hero .eyebrow{font-size:10px;letter-spacing:4px;color:#a8c896;text-transform:uppercase;margin-bottom:10px;}
+.hero h1{font-size:36px;font-weight:800;letter-spacing:-1px;}
+.hero p{font-size:13px;color:#c8dfc0;font-style:italic;margin-top:8px;}
+.section{padding:22px 16px;max-width:520px;margin:0 auto;}
+.section-title{font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#3a6b35;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:'';display:block;width:4px;height:18px;background:#8B6914;border-radius:2px;}
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;}
+.spec-box{background:#fff;border:1px solid #e0c98a;border-radius:14px;padding:16px 8px;text-align:center;box-shadow:0 2px 8px rgba(139,105,20,0.07);}
+.spec-box .v{font-size:17px;font-weight:800;color:#3a6b35;line-height:1.1;}
+.spec-box .l{font-size:10px;color:#7a5c2e;margin-top:4px;line-height:1.3;}
+/* Layer bar */
+.layer-bar{height:22px;border-radius:11px;overflow:hidden;display:flex;border:2px solid #8B6914;margin-bottom:16px;box-shadow:0 2px 8px #8B691420;}
+.layer-item{display:flex;align-items:center;gap:12px;margin-bottom:10px;background:#fff;border-radius:12px;padding:12px 14px;border:1px solid #e0c98a;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.layer-dot{width:16px;height:16px;border-radius:5px;flex-shrink:0;}
+.layer-name-wrap{flex:1;}
+.layer-name{font-size:13px;font-weight:700;color:#2d1f0e;}
+.layer-sub{font-size:10px;color:#7a5c2e;margin-top:1px;}
+.layer-pct{font-size:14px;font-weight:800;color:#3a6b35;white-space:nowrap;}
+/* Timeline */
+.tl-wrap{position:relative;padding-left:20px;}
+.tl-line{position:absolute;left:17px;top:20px;bottom:20px;width:3px;background:linear-gradient(to bottom,#3a6b35,#8B6914);border-radius:2px;}
+.tl-item{display:flex;gap:16px;margin-bottom:22px;position:relative;}
+.tl-dot{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;border:3px solid #fff;box-shadow:0 0 0 2px #3a6b35;z-index:1;}
+.tl-body{flex:1;background:#fff;border-radius:12px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.tl-title{font-weight:800;font-size:14px;color:#2d1f0e;}
+.tl-day{font-size:10px;color:#8B6914;font-weight:700;margin-top:2px;letter-spacing:1px;}
+.tl-desc{font-size:12px;color:#5a3e0a;margin-top:6px;line-height:1.6;}
+/* Crops */
+.crops-wrap{display:flex;flex-wrap:wrap;gap:8px;}
+.crop-tag{background:#4A7C3F;color:#fff;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;}
+/* Tips */
+.tip-box{background:#fff;border-left:4px solid #8B6914;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.tip-title{font-size:13px;font-weight:800;color:#8B6914;margin-bottom:8px;}
+.tip-box p{font-size:13px;color:#5a3e0a;line-height:1.8;}
+.green-box{background:#e8f5e3;border:2px solid #4A7C3F;border-radius:14px;padding:18px;margin-bottom:12px;}
+.green-box .gb-title{font-weight:800;color:#3a6b35;font-size:14px;margin-bottom:10px;}
+.green-box p{font-size:13px;color:#2d4a1e;line-height:1.8;}
+/* Nutrient flow */
+.flow-box{background:#f8f4ec;border:2px dashed #8B6914;border-radius:14px;padding:16px;text-align:center;}
+.flow-row{font-size:12px;color:#2d1f0e;padding:4px 0;line-height:1.5;}
+.flow-arrow{font-size:20px;color:#3a6b35;margin:2px 0;display:block;}
+/* Team */
+.team-section{background:linear-gradient(135deg,#1e3d1a,#2d5226);color:#f5ead0;padding:28px 20px;text-align:center;}
+.team-label{font-size:10px;letter-spacing:4px;color:#a8c896;text-transform:uppercase;margin-bottom:16px;}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:320px;margin:0 auto;}
+.team-name{background:linear-gradient(135deg,#3a6b35,#5a9a52);border-radius:12px;padding:14px 8px;font-size:12px;font-weight:800;letter-spacing:0.5px;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+.footer{text-align:center;padding:18px 16px;font-size:10px;color:#8B6914;border-top:1px solid #e0c98a;background:#f8f4ec;letter-spacing:1px;}
+.alt-bg{background:#fafaf8;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">B.Sc. Agriculture · Innovation Project · Erode, Tamil Nadu</div>
+  <h1>🌱 Nutripot</h1>
+  <p>Biodegradable Nutrient-Fortified Seedling Pot &nbsp;·&nbsp; &Oslash; 7 cm</p>
+</div>
+
+<!-- SPECS -->
+<div class="section">
+  <div class="section-title">Technical Specifications</div>
+  <div class="specs-grid">
+    <div class="spec-box"><div class="v">7 cm</div><div class="l">⌀ Diameter</div></div>
+    <div class="spec-box"><div class="v">10 cm</div><div class="l">↕ Height</div></div>
+    <div class="spec-box"><div class="v">1 cm</div><div class="l">▣ Wall Thickness</div></div>
+    <div class="spec-box"><div class="v">65–75 g</div><div class="l">⚖ Weight per pot</div></div>
+    <div class="spec-box"><div class="v">30–45 days</div><div class="l">♻ Biodegrades in</div></div>
+    <div class="spec-box"><div class="v">Near Zero</div><div class="l">✅ Transplant Shock</div></div>
+  </div>
+</div>
+
+<!-- COMPOSITION -->
+<div class="section alt-bg">
+  <div class="section-title">Material Composition</div>
+  <div class="layer-bar">
+    <div style="width:60%;background:#8B6914;"></div>
+    <div style="width:20%;background:#C8A96E;"></div>
+    <div style="width:10%;background:#4A7C3F;"></div>
+    <div style="width:4%;background:#6B8F3E;"></div>
+    <div style="width:3%;background:#7B6E9E;"></div>
+    <div style="width:2%;background:#F5C518;"></div>
+    <div style="width:1%;background:#E8D5B0;"></div>
+  </div>
+  <div class="layer-item"><div class="layer-dot" style="background:#8B6914;"></div><div class="layer-name-wrap"><div class="layer-name">Coir Pith</div><div class="layer-sub">Structural strength & moisture retention</div></div><div class="layer-pct">60%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#C8A96E;"></div><div class="layer-name-wrap"><div class="layer-name">Paper Pulp</div><div class="layer-sub">Biodegradable binder, holds pot shape</div></div><div class="layer-pct">20%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#4A7C3F;"></div><div class="layer-name-wrap"><div class="layer-name">Vermicompost</div><div class="layer-sub">Rich starter nutrients for seedling roots</div></div><div class="layer-pct">10%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#6B8F3E;"></div><div class="layer-name-wrap"><div class="layer-name">Neem Cake</div><div class="layer-sub">Natural pest & pathogen suppression</div></div><div class="layer-pct">4%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#7B6E9E;"></div><div class="layer-name-wrap"><div class="layer-name">Rock Phosphate</div><div class="layer-sub">Promotes deep root development</div></div><div class="layer-pct">3%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#F5C518;"></div><div class="layer-name-wrap"><div class="layer-name">Banana Peel Powder</div><div class="layer-sub">Potassium source for plant vigour</div></div><div class="layer-pct">2%</div></div>
+  <div class="layer-item"><div class="layer-dot" style="background:#b0a080;"></div><div class="layer-name-wrap"><div class="layer-name">Starch Binder</div><div class="layer-sub">Final shape & handling retention</div></div><div class="layer-pct">1%</div></div>
+</div>
+
+<!-- CROPS -->
+<div class="section">
+  <div class="section-title">Suitable Crops</div>
+  <div class="crops-wrap">
+    <span class="crop-tag">🍅 Tomato</span>
+    <span class="crop-tag">🌶 Chilli</span>
+    <span class="crop-tag">🍆 Brinjal</span>
+    <span class="crop-tag">🥬 Cabbage</span>
+    <span class="crop-tag">🥦 Cauliflower</span>
+    <span class="crop-tag">🌼 Marigold</span>
+  </div>
+</div>
+
+<!-- LIFECYCLE -->
+<div class="section alt-bg">
+  <div class="section-title">How Nutripot Works — Lifecycle</div>
+  <div class="tl-wrap">
+    <div class="tl-line"></div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#3a6b35;">1</div>
+      <div class="tl-body">
+        <div class="tl-title">Sowing</div>
+        <div class="tl-day">DAY 0</div>
+        <div class="tl-desc">Fill Nutripot with coco peat or soil mix. Sow 1–2 seeds per pot. Keep in shaded nursery area and water lightly.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#4A7C3F;">2</div>
+      <div class="tl-body">
+        <div class="tl-title">Germination</div>
+        <div class="tl-day">DAY 7–10</div>
+        <div class="tl-desc">Roots grow freely and can penetrate through pot walls directly. No barrier to root expansion — natural growth continues.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#6B8F3E;">3</div>
+      <div class="tl-body">
+        <div class="tl-title">Transplanting</div>
+        <div class="tl-day">DAY 21–28</div>
+        <div class="tl-desc">Plant the entire pot directly into the field or grow bag. No need to remove the pot. Root system stays completely undisturbed.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#8B6914;">4</div>
+      <div class="tl-body">
+        <div class="tl-title">Pot Degradation</div>
+        <div class="tl-day">DAY 30–45</div>
+        <div class="tl-desc">Pot breaks down in soil. Coir, vermicompost, neem cake, rock phosphate, and banana peel powder release nutrients directly to roots.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#3a6b35;">5</div>
+      <div class="tl-body">
+        <div class="tl-title">Full Establishment</div>
+        <div class="tl-day">DAY 45+</div>
+        <div class="tl-desc">Plant thrives on slow-release starter nutrients from degraded pot. Strong roots, healthy growth, no plastic residue left behind.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nutrient flow -->
+  <div class="flow-box">
+    <div style="font-weight:800;color:#8B6914;font-size:13px;margin-bottom:10px;">🧬 Nutrient Release Chain</div>
+    <div class="flow-row"><strong>Pot breaks down in soil</strong></div>
+    <span class="flow-arrow">↓</span>
+    <div class="flow-row">Vermicompost → Nitrogen, Phosphorus, Potassium</div>
+    <div class="flow-row">Neem Cake → Pest & fungal defence</div>
+    <div class="flow-row">Rock Phosphate → Root-building phosphorus</div>
+    <div class="flow-row">Banana Peel Powder → Potassium boost</div>
+    <span class="flow-arrow">↓</span>
+    <div class="flow-row" style="font-weight:700;color:#3a6b35;">🌱 Slow-release directly to growing roots</div>
+  </div>
+</div>
+
+<!-- FARMER GUIDE -->
+<div class="section">
+  <div class="section-title">Farmer's Guide</div>
+  <div class="tip-box">
+    <div class="tip-title">👨‍🌾 Step-by-Step Usage</div>
+    <p>
+      <strong>Step 1:</strong> Fill Nutripot with coco peat or nursery soil mix.<br/>
+      <strong>Step 2:</strong> Sow 1–2 seeds and cover lightly. Water gently.<br/>
+      <strong>Step 3:</strong> Keep in partial shade for 3–5 days after germination.<br/>
+      <strong>Step 4:</strong> After 3–4 weeks, transplant the <strong>entire pot</strong> to field.<br/>
+      <strong>Step 5:</strong> Water normally — pot dissolves completely in 30–45 days.
+    </p>
+  </div>
+  <div class="tip-box">
+    <div class="tip-title">✅ Key Benefits</div>
+    <p>
+      ✔ No transplant shock — roots stay undisturbed<br/>
+      ✔ Neem cake protects from soil pests & fungi naturally<br/>
+      ✔ Rock phosphate builds a strong root system<br/>
+      ✔ Vermicompost feeds early growth — no extra fertiliser needed<br/>
+      ✔ Fully biodegradable — zero plastic waste in the field<br/>
+      ✔ Saves labour — no pot removal at transplanting time<br/>
+      ✔ Reduces water stress during establishment phase
+    </p>
+  </div>
+  <div class="tip-box">
+    <div class="tip-title">⚠ Storage & Handling Tips</div>
+    <p>
+      · Store pots in a cool, dry place away from direct rain.<br/>
+      · Do not soak in water before use — fill gently.<br/>
+      · Use within 6 months of manufacture for best nutrient activity.<br/>
+      · Handle with care — walls are firm but can crack if dropped.
+    </p>
+  </div>
+  <div class="green-box">
+    <div class="gb-title">📈 Market & Commercial Potential</div>
+    <p>
+      <strong>Primary Market:</strong> Nurseries & vegetable farmers, Tamil Nadu<br/>
+      <strong>Secondary Market:</strong> Export to EU (eco-packaging regulations)<br/>
+      <strong>USP:</strong> Nutrient-enriched biodegradable pot — replaces plastic seedling trays<br/>
+      <strong>Price Point:</strong> Affordable for small & marginal farmers<br/>
+      <strong>Brand Name:</strong> Nutripot — Fortified Biodegradable Seedling Pot
+    </p>
+  </div>
+</div>
+
+<!-- TEAM -->
+<div class="team-section">
+  <div class="team-label">Project Presented by</div>
+  <div class="team-grid">
+    <div class="team-name">GIRIVIJEY</div>
+    <div class="team-name">JESSICA SHARONE</div>
+    <div class="team-name">DIVYA DHARSHINI</div>
+    <div class="team-name">KALAISELVI</div>
+    <div class="team-name">GAYATHRI</div>
+  </div>
+</div>
+
+<div class="footer">
+  NUTRIPOT &nbsp;·&nbsp; B.Sc. Agriculture &nbsp;·&nbsp; ICAR Curriculum &nbsp;·&nbsp; Erode, Tamil Nadu, India
+</div>
+
+</body>
+</html>
